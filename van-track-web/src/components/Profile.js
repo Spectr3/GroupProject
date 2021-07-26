@@ -22,7 +22,7 @@ export default function Profile() {
     }
 
     return (
-        <CenteredContainer>
+        <>
             <Header />
             <div className="align-items-center">
                 <Card className="profile">
@@ -41,6 +41,6 @@ export default function Profile() {
                     </Button>
                 </div>
             </div>
-        </CenteredContainer>
+        </>
     )
 }
