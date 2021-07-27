@@ -32,9 +32,6 @@ function Header() {
                 <Link className="header__navitem" to="/location">
                     Locations
                 </Link>
-                <Link className="header__navitem" to="/staff">
-                    Staff
-                </Link>
                 <Link classname="header__navitem" to="/profile">
                     Profile
                 </Link>
