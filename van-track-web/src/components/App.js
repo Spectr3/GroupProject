@@ -11,7 +11,10 @@ import UpdateProfile from "./UpdateProfile"
 import Location from "./Location/Locations"
 import Stock from "./Stock/Stock"
 import Staff from "./Staff"
-import Dashboard from "./Dashboard/Dashboard";
+import Dashboard from "./Dashboard/Dashboard"
+import LocationDetails from "./Location/Details/LocationDetails"
+import StockDetails from "./Stock/Details/StockDetails"
+
 
 function App() {
   console.log("APP COMPONENT")
@@ -29,7 +32,9 @@ function App() {
                 <Route path="/forgot-password" component={ForgotPassword} />
 
                 <PrivateRoute path="/location" component={Location} />
+                <PrivateRoute path="/locationdetails/:id" component={LocationDetails}/>
                 <PrivateRoute path="/stock" component={Stock} />
+                <PrivateRoute path="/stockdetails/:id" component={StockDetails} />
                 <PrivateRoute path="/staff" component={Staff} />
                 <PrivateRoute path="/" component={Dashboard} />
 
