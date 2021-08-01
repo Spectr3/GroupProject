@@ -32,7 +32,7 @@ function Header() {
                 <Link className="header__navitem" to="/location">
                     Locations
                 </Link>
-                <Link classname="header__navitem" to="/profile">
+                <Link className="header__navitem" to="/profile">
                     Profile
                 </Link>
                 <Button onClick={handleLogout}>
