@@ -2,6 +2,7 @@ import React from "react"
 import Header from "../Header/Header"
 import { firestore } from '../../firebase'
 import './Stock.css'
+import {Link} from "react-router-dom";
 
 function Stock() {
     const [stockItems, setStockItems] = React.useState([])
@@ -29,13 +30,13 @@ function Stock() {
                 </thead>
                 <tbody>
                 {stockItems.map(stockItem => (
-                    <tr>
+                    <tr key={stockItem.key}>
                         <td>{stockItem.ItemName}</td>
                         <td>{stockItem.ItemType}</td>
                         <td>{stockItem.Total}</td>
                         <td>{stockItem.Warehouse}</td>
                         <td>{stockItem.OnVans}</td>
-                        <td></td>
+                        <td><Link className="btn app-btn" to={`/stockdetails/${stockItem.id}`}>Details</Link></td>
                     </tr>
                 ))}
                 </tbody>
